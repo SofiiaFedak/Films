@@ -1,4 +1,4 @@
--------процедура netflix за рейтингом ----------
+-------rating netflix procedure ----------
 ALTER PROC netflix_films
 
 AS
@@ -7,7 +7,7 @@ WHERE imdb >5  and studio = 'netflix'
 ORDER BY imdb
  EXEC netflix_films
 
- ------------топ 5 акторів--------
+ ------------top 5 actors--------
  CREATE PROC TOP_ACTORS
  AS
  SELECT *
@@ -16,7 +16,7 @@ ORDER BY imdb
 ORDER BY game_number desc
 EXEC TOP_ACTORS
 
------по вставленні -----
+-----insert -----
 CREATE PROC new_Actor
 @ID INT,
 @FIRSTNAME VARCHAR (30),
