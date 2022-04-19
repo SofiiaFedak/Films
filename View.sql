@@ -1,4 +1,4 @@
------------------режисер=продюсер--------------
+-----------------director = producer--------------
 SELECT * FROM director_producer
 
 CREATE VIEW director_producer
@@ -17,7 +17,7 @@ ON d.id = f.director_id
 WHERE d.firstname = f.producer_firstname and d.Lastname = f.producer_lastname;
 
 
------------------дані про фільм----------------
+-----------------data about film----------------
 SELECT * FROM film_description
 
 CREATE VIEW film_description AS
@@ -38,7 +38,7 @@ ON fc.film_id = f.ID
 join Actors a
 ON fc.actors_id = a.ID
  
-----скільки разів знімались актори в фільмах------
+---- how many times actors have acted in films------
 SELECT * FROM Actor_number_star
 
 CREATE VIEW  Actor_number_star
@@ -55,7 +55,7 @@ SELECT * FROM Actor_number_star
 WHERE game_number >2;
 
 
- ---------------режисер= актор-------------------------
+ ---------------director = actor -------------------------
  
  SELECT * FROM director_actor
 
@@ -70,7 +70,7 @@ SELECT firstname,
 FROM actors;
 
 
------------------------------------------------
+---------------Best Actress--------------------------------
  SELECT * FROM cast
 
 
@@ -96,7 +96,6 @@ where DESCRIPTION = 'Best Supporting Actress' or
 DESCRIPTION = 'Best Film Actress in a Leading Role'or 
 DESCRIPTION = 'Best Actress'
 
-drop view cast
 
 SELECT * FROM Actor_number_star
 WHERE game_number >2;
